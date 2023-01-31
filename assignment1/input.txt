@@ -1,0 +1,7 @@
+Write a program in Python that implements the Vigenere polyalphabetic cipher for English
+text. Your cipher should distinguish lowercase and uppercase letters (i.e. a letter should be
+encrypted differently based on if it is uppercase or lowercase). In your cipher, the
+encryption key, plaintext and the ciphertext should be composed of lowercase and
+uppercase letters. Your program should read the input from a file called ‘input.txt’ and write
+to a file called ‘output.txt’. It should read the encryption key from a file called ‘key.txt’. Your
+program should perform the following operations.
