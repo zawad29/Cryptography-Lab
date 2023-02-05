@@ -1,7 +1,12 @@
-Write a program in Python that implements the Vigenere polyalphabetic cipher for English
-text. Your cipher should distinguish lowercase and uppercase letters (i.e. a letter should be
-encrypted differently based on if it is uppercase or lowercase). In your cipher, the
-encryption key, plaintext and the ciphertext should be composed of lowercase and
-uppercase letters. Your program should read the input from a file called ‘input.txt’ and write
-to a file called ‘output.txt’. It should read the encryption key from a file called ‘key.txt’. Your
-program should perform the following operations.
+The strength of this cipher is that there are multiple ciphertext letters for 
+each plaintext letter, one for each unique letter of the keyword. Thus, the letter frequency information is obscured. However, not all knowledge of the plaintext structure is lost. For example, Figure 3.6 shows the frequency distribution for a Vigenere 
+cipher with a keyword of length 9. An improvement is achieved over the Playfair 
+cipher, but considerable frequency information remains.
+It is instructive to sketch a method of breaking this cipher, because the method 
+reveals some of the mathematical principles that apply in cryptanalysis.
+First, suppose that the opponent believes that the ciphertext was encrypted 
+using either monoalphabetic substitution or a Vigenère cipher. A simple test can 
+be made to make a determination. If a monoalphabetic substitution is used, then 
+the statistical properties of the ciphertext should be the same as that of the language of the plaintext. Thus, referring to Figure 3.5, there should be one cipher letter with a relative frequency of occurrence of about 12.7%, one with about 9.06%, 
+and so on. If only a single message is available for analysis, we would not expect 
+an exact match of this small sample with the statistical profile of the plaintext language. Nevertheless, if the correspondence is close, we can assume a monoalphabetic substitution.
