@@ -74,9 +74,9 @@ def predictKey(text, keylen):
         for j in range(0, 26):
             error = 0.0
             for i in range(0, 26):
-                char_pos = 65+(i+j) % 26
-                if chr(char_pos) in freq:
-                    error += abs(frequency[chr(65+i)] - freq[chr(char_pos)])
+                shifted_pos = 65+(i+j) % 26
+                if chr(shifted_pos) in freq:
+                    error += abs(frequency[chr(65+i)] - freq[chr(shifted_pos)])
             if error < min_error:
                 min_error = error
                 ch = chr(j+65)
@@ -92,12 +92,13 @@ def ioc(text):
         if(i >= 'a' and i <= 'z'):
             N += 1
             freq[ord(i)-97] += 1
-    print(freq)
+    # print(freq)
     total = 0
     for i in range(0, 26):
         total += freq[i] * (freq[i] - 1)
     total = 26*total/N/(N-1)
-    print(total)
+    # print(total)
+    return total
 
 
 def vigenere_hack():
