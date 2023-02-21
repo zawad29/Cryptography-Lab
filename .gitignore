@@ -1,1 +1,4 @@
 assignment1/__pycache__/encrypt.cpython-310.pyc
+*.exe
+*.c
+*.zip

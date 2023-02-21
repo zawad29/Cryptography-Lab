@@ -2,7 +2,6 @@
 encryption part
 '''
 
-
 def encode(i, k):
     kval = (ord(k) - 97) if k >= 'a' and k <= 'z' else (ord(k)-65)
     if i >= 'a' and i <= 'z':
@@ -26,6 +25,12 @@ def vigenere(input, key):
     return output
 
 
+def vigenere_decipher(input, key):
+    newkey = reverse_key(key)
+    original = vigenere(input, newkey)
+    return original
+
+
 def encrypt():
     with open("input.txt", "r") as inputfile, open("key.txt", "r") as keyfile, open("output.txt", "w") as outputfile:
         input = inputfile.read()
@@ -39,6 +44,7 @@ def encrypt():
 decrypt to original text
 '''
 
+
 def reverse_key(key):
     newkey = ''
     for k in key:
@@ -47,6 +53,7 @@ def reverse_key(key):
         newkey += chr(kval+97)
     # print(newkey)
     return newkey
+
 
 def decrypt():
     with open("original.txt", "w") as originalfile, open("key.txt", "r") as keyfile, open("output.txt", "r") as outputfile:

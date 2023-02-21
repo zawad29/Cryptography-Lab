@@ -1,0 +1,10 @@
+we stand today on the brink of,a revolution in cryptography.
+probabilistic encryption is thi use of randomness in an encr
+secure sockets layer (ssl), ary cryptographic protocols that
+this document will detail a vuhnerability in the ssh cryptog
+mit developed kerberos to protact network services provided 
+nist announced a competition ts develop a new cryptographic 
+diffie-hellman establishes a stared secret that can be used 
+public-key cryptography refers,to a cryptographic system req
+the keys used to sign the certmficates had been stolen from 
+we hope this inspires others tk work in this fascinating fie

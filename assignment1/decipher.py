@@ -1,7 +1,7 @@
 import math
 import numpy as np
 import re
-from encrypt import vigenere_decipher, vigenere_cipher
+from encrypt import vigenere_decipher
 
 REGEX = '[^A-Za-z]'
 
